@@ -1,24 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Load the IBM Plex Serif font */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "tailwindcss";
 
-/* 🌈 Define your theme variables */
+/* Theme variables */
 :root {
   --background: #f5efea;
   --foreground: #2a2a2a;
-  --font-serif: "Playfair Display", Georgia, Cambria, "Palatino Linotype",
-    Palatino, Baskerville, Garamond, serif;
+  --font-serif: "IBM Plex Serif", "Times New Roman", "Merriweather", serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-serif: var(--font-serif);
 }
 
+/* Global base styles */
 @layer base {
   body {
-    @apply min-h-screen antialiased;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-serif);
+    margin: 0;
   }
 }

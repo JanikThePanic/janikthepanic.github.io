@@ -1,18 +1,26 @@
-import "./global.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Knickknacks from "./pages/Knickknacks";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
-      <p className="text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        {/* Root Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/knickknacks" element={<Knickknacks />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* 404 */}
+        <Route path="*" element={<p>There's nothing here: 404!</p>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

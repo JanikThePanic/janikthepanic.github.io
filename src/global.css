@@ -28,5 +28,9 @@
     font-family: var(--font-serif);
     margin: 0;
     @apply text-base;
+    
+    /* line-height: 1.5;
+    a { text-underline-offset: 2px; }
+    a:hover { text-decoration: underline; } */
   }
 }

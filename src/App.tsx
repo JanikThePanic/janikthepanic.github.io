@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./global.css";
+
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Knickknacks from "./pages/Knickknacks";

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Define your theme variables */
+:root {
+  --background: #f5efea;
+  --foreground: #2a2a2a;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Palatino Linotype",
+    Palatino, Baskerville, Garamond, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-serif);
+}
+
+@layer base {
+  body {
+    @apply min-h-screen antialiased;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-serif);
+  }
+}

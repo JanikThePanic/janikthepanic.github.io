@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import "./global.css";
 
 import Home from "./pages/Home";
@@ -8,22 +7,17 @@ import Knickknacks from "./pages/Knickknacks";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Root Pages */}
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/knickknacks" element={<Knickknacks />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<Contact />} />
-
-        {/* 404 */}
+        <Route index element={<Home />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="knickknacks" element={<Knickknacks />} />
+        <Route path="resume" element={<Resume />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;
